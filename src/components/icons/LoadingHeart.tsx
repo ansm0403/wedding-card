@@ -1,13 +1,24 @@
 import React from 'react'
-import styles from '@shared/FullScreenMessage.module.scss'
+// import styles from '@shared/FullScreenMessage.module.scss'
 import classNames from 'classnames/bind'
+import styles from './Heart.module.scss'
 
 const cx = classNames.bind(styles);
 
-export default function LoadingHeart() {
+interface LoadingHeart{
+  size? : "big" | "small"
+  animation? : boolean;
+}
+
+export default function LoadingHeart({size = "small", animation = false} : LoadingHeart) {
+  const heartSize = size === "small" ? "small-heart" : "big-heart";
+
+  const heartAnime = animation ? "animation-heart" : "";
+
+  console.log(`size : ${heartSize}, anime : ${heartAnime}`);
   return (
     <svg 
-      className={cx('loading-heart')}
+      className={cx(['heart', heartSize, heartAnime])}
       version="1.1" 
       viewBox="0 0 512 512" 
       xmlns="http://www.w3.org/2000/svg"

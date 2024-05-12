@@ -16,7 +16,7 @@ export default function FullScreenMessage({type} : FullScreenMessageProps) {
     <div className={cx('container')}>
         {
             type === 'loading' 
-            ? <LoadingHeart />
+            ? <LoadingHeart size = "big" animation/>
             : <>
                 <BiSolidError size={30} /> 
                 에러가 발생했습니다. 다시 시도해주세요.
