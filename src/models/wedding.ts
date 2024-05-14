@@ -32,5 +32,6 @@ export interface Person {
     account : {
         bankName : string;
         accountNumber : string;
+        kakaopayLink? : string;
     }
 }
