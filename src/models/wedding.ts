@@ -13,7 +13,6 @@ export interface Wedding {
     groom : Person & {parents : Person[]}
     bride : Person & {parents : Person[]}
 }
-
 export interface Location {
     lat : number;
     lng : number;

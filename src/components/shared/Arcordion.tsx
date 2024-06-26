@@ -16,7 +16,6 @@ export default function Arcordion({label, children} : ArcordionType) {
   const handleToggle = () => {
     setExtended((prev)=>!prev);  
   }
-
   return (
     <div className={cx(["wrap-arcordion", extended ? 'open' : ''])}>
         <div className={cx("wrap-header")} onClick={handleToggle}>

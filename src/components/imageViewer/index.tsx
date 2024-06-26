@@ -4,6 +4,7 @@ import classNames from "classnames/bind"
 import {Swiper, SwiperSlide} from "swiper/react";
 import styles from './ImageViewer.module.scss'
 import CloseButton from '../icons/CloseButton';
+import Dimmed from '../shared/Dimmed';
 
 const cx = classNames.bind(styles);
 
@@ -22,13 +23,14 @@ export default function ImageViewer({
         return null
     }
     return (
-        <div className={cx('dimmed')}>
+        <Dimmed> 
             <CloseButton className = {cx('close-button')} onClose = {onClose} />
             <Swiper 
                 spaceBetween={20} 
                 slidesPerView = {1} 
                 loop 
                 initialSlide={selectedIdx}
+             
             >
                 {images.map((src, index)=>(
                     <SwiperSlide key={index}>
@@ -37,6 +39,7 @@ export default function ImageViewer({
                 ))}
             
             </Swiper>
-        </div>
+
+        </Dimmed>
     )
 }

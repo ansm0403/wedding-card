@@ -10,7 +10,6 @@ interface SectionProps {
     className?  : string;
     title? : string
 }
-
 export default function Section({children, className, title} : SectionProps){
     return (
         <section className={cx(['container', className])}>
