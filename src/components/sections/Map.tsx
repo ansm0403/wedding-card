@@ -47,7 +47,7 @@ export default function Map({location} : {location : Location}) {
         </div>
         <div className={cx('wrap-map')}>
             <div className={cx('map')} ref = {mapContainer}></div>
-            <a className={cx('btn-find-way')} href={location.link} target = "_blank">길찾기</a>
+            <a className={cx('btn-find-way')} href={location.link} target = "_blank" rel="noreferrer">길찾기</a>
         </div>
         <div>
             <WayToCome label = "버스" list = {location.waytocome.bus} />

@@ -29,7 +29,10 @@ export default function ImageGallery({images} : {images: string[]}) {
                             key = {index}
                             onClick = {()=>{handleSelectedImage(index)}}
                         >
-                            <img src = {src} alt = "사진첩 이미지" />
+                           <picture>
+                            <source srcSet={`${src}.webp`} type="image/webp" />
+                            <img src = {`${src}.jpg`} alt = "photo" />
+                           </picture>
                         </li>
                     ))}
                 </ul>

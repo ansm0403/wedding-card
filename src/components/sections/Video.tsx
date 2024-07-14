@@ -15,7 +15,8 @@ export default function Heading() {
             controls
             poster='/assets/wedding.png'
         >
-            <source src = "/assets/wedding.mp4" type = "video/mp4"></source>
+            <source src = "/assets/media/wedding.webm" type = "video/webm"></source>
+            <source src = "/assets/media/wedding.mp4" type = "video/mp4"></source>
         </video>
     </Section>
   )

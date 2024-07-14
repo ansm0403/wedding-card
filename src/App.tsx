@@ -1,8 +1,6 @@
 
 import classNames from 'classnames/bind';
-import { useEffect, useState } from 'react';
 import styles from './App.module.scss'
-import FullScreenMessage from '@shared/FullScreenMessage';
 import Heading from './components/sections/Heading';
 import Video from './components/sections/Video';
 import { Wedding } from '@models/wedding';
@@ -13,44 +11,50 @@ import Calender from './components/sections/Calender';
 import Map from './components/sections/Map';
 import Contact from './components/sections/Contact';
 import Share from './components/sections/Share';
-import Modal from './components/shared/Modal';
 import AttendCountModal from './components/AttendCountModal';
+import { useSuspenseQuery } from '@tanstack/react-query';
 
 const cx = classNames.bind(styles);
 
 function App() {
-  const [wedding, setWedding] = useState<Wedding | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  // const [wedding, setWedding] = useState<Wedding | null>(null);
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState(false);
 
-  useEffect(()=>{
-    setLoading(true);
-    fetch('http://localhost:8888/wedding')
-    .then((res)=>{
-      if(!res.ok){
-        throw new Error("청첩장 정보를 받아오지 못했습니다.")
-      }
-      return res.json()
-    })
-    .then((data)=>{
-      setWedding(data)
-    })
-    .catch((error)=>{
-      setError(true);
-      console.log(error);
-    })
-    .finally(()=>{
-      setLoading(false);
-    })
+  const fetchWedding = async () : Promise<Wedding>=> {
+      return fetch('http://localhost:8888/wedding')
+      .then((res)=>{
+        if(!res.ok){
+          throw new Error("청첩장 정보를 받아오지 못했습니다.")
+        }
+        return res.json()
+  })}
+
+  const { data : wedding } = useSuspenseQuery({
+    queryKey : ["wedding"], 
+    queryFn : fetchWedding,
+  })
+  // useEffect(()=>{
+  //   setLoading(true);
+  //   fetch('http://localhost:8888/wedding')
+  //   .then((res)=>{
+  //     if(!res.ok){
+  //       throw new Error("청첩장 정보를 받아오지 못했습니다.")
+  //     }
+  //     return res.json()
+  //   })
+  //   .then((data)=>{
+  //     setWedding(data)
+  //   })
+  //   .catch((error)=>{
+  //     setError(true);
+  //     console.log(error);
+  //   })
+  //   .finally(()=>{
+  //     setLoading(false);
+  //   })
   
-  },[])
-
-  if(loading){
-    return <FullScreenMessage type = "loading" />
-  }
-  if(error){
-    return <FullScreenMessage type = "error" />
-  }
+  // },[])
 
   if (wedding == null) {
     return null
@@ -65,7 +69,6 @@ function App() {
     message : {intro, invitation}
   
   } = wedding
-
   return (
     <div className={cx('container')}>
       <Heading date = {date}/>

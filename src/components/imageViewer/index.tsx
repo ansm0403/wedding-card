@@ -34,7 +34,10 @@ export default function ImageViewer({
             >
                 {images.map((src, index)=>(
                     <SwiperSlide key={index}>
-                        <img src = {src} alt = "이미지뷰어" />
+                        <picture>
+                            <source srcSet={`${src}.webp`} type="image/webp" />
+                            <img src = {`${src}.jpg`} alt = "photo" />
+                        </picture>
                     </SwiperSlide>
                 ))}
             

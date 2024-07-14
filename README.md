@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Wedding Invitation
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+리액트를 이용하여 만든 결혼식 초대장입니다.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 프로젝트 소개
 
-### `yarn start`
+최근 제가 나이를 먹어감에 따라 주변 사람들의 결혼이 많아졌습니다.
+결혼 초대장을 보고 떠오른 아이디어가 아니라 결혼식 당일날 식장에서 나온 웨딩 영상을 보고 웨딩 관련하여 웹으로 만들어보자는 생각으로 만들어보았습니다.
+예비 웨딩촬영 사진들을 앨범 형태로 만들어 열어볼 수 있으며, 축의금을 송금할 수 있고 카카오톡으로 초대장을 전송할 수 있도록 만들었습니다.
+ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
+## 개발자 소개
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+* 안상문 : 프론트엔드 및 Sanity, Next Auth를 이용한 서버 개발
+  
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술 스택
 
-### `yarn build`
+### Enviornment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+ ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+ ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react)
+![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Config
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 주요 기능
 
-## Learn More
+* 웨딩 앨범 슬라이드
+* 송금 및 카카오톡 보내기
+* 찾아오는 길 지도 
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 실행 결과
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 개선점
+
+
+
+## 후기
+
+Next.js 에만 몰두한 것 같아 리액트 공부도 하기위해 만들었습니다.

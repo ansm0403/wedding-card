@@ -1,16 +1,15 @@
-import React from 'react'
-// import styles from '@shared/FullScreenMessage.module.scss'
+
 import classNames from 'classnames/bind'
 import styles from './Heart.module.scss'
 
 const cx = classNames.bind(styles);
 
-interface LoadingHeart{
+interface LoadingHeartProps{
   size? : "big" | "small"
   animation? : boolean;
 }
 
-export default function LoadingHeart({size = "small", animation = false} : LoadingHeart) {
+export default function LoadingHeart({size = "small", animation = false} : LoadingHeartProps) {
   const heartSize = size === "small" ? "small-heart" : "big-heart";
 
   const heartAnime = animation ? "animation-heart" : "";
