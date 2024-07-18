@@ -1,13 +1,16 @@
-# instagram
+# Wedding Invitation
 <br>
 
-next.js 를 이용한 인스타그램 클론코딩입니다.
+리액트를 이용하여 만든 결혼식 초대장입니다.
 
 ---
 
 ## 프로젝트 소개
 
-Next.js 의 숙련도를 올리고 지난 프로젝트때 완성하지 못한 검색기능을 완성하며 직접 서버를 구현하여 풀스택 프레임워크의 유용함을 직접 느끼기 위하여 시작한 프로젝트
+저도 20대 후반이다보니 주변 사람들의 결혼이 많아졌습니다.
+결혼 초대장을 보고 떠오른 아이디어가 아니라 결혼식 당일날 식장에서 나온 웨딩 영상을 보고 웨딩 관련하여 웹으로 만들어보자는 생각으로 만들어보았습니다.
+예비 웨딩촬영 사진들을 앨범 형태로 만들어 열어볼 수 있으며, 축의금을 송금할 수 있고 카카오톡으로 초대장을 전송할 수 있도록 만들었습니다.
+ 
 
 ---
 ## 개발자 소개
@@ -28,23 +31,23 @@ Next.js 의 숙련도를 올리고 지난 프로젝트때 완성하지 못한 �
 
 ### Development
 
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react)
+![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
 
 
 ### Config
 
-![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
 
 <br>
 
 ## 주요 기능
 
-* 사용자 검색 기능
-* 포스트 등록 및 수정 삭제
-* 좋아요 기능
+* 웨딩 앨범 슬라이드
+* 송금 및 카카오톡 보내기
+* 찾아오는 길 지도 
   
 
 ## 실행 결과
@@ -52,6 +55,17 @@ Next.js 의 숙련도를 올리고 지난 프로젝트때 완성하지 못한 �
 
 ## 개선점
 
+* ***동영상 및 이미지 최적화*** : 하나의 페이지에 동영상과 이미지들이 들어가다보니 LightHouse의 점수가 낮게 나왔습니다.<br>
+  그래서 이미지를 Webp 형식으로 바꿨고, 동영상을 Webm 형식으로 변경하였고, 이미지 크기를 줄여 이미지와 동영상을 최적화 하였습니다.
+  
+* ***클라우드를 이용한 이미지파일 관리*** : 기본 웹에 보여지는 이미지는 약 400x300으로 충분했지만 모달창으로 띄워지는 이미지는 깨졌기때문에 원본 이미지의 크기가 필요했습니다.<br>
+  하지만 이미 Webp를 지원하지 않는 브라우저에 대비해 png 파일과 Webp 파일을 세트로 저장했는데, 원본크기의 파일까지 webp와 png를 저장하는 것은 비효율적이라 판단하였습니다.
+  그래서 cloudinary 를 이용하여 이미지를 클라우드에 따로 저장하였고 URL에 이미지 크기도 지정할 수 있었기에 이미지 관리를 효율적으로 할 수 있었습니다.
+
 
 ## 후기
- 
+
+Next.js 에만 몰두한 것 같아 리액트 공부도 하기 위해 이번에는 리액트로 만들어봤습니다.
+<br>
+사실 처음엔 하나의 페이지라 매우 간단하게 만들 수 있을거라 생각했지만 최적화를 생각하며 만들려고 하니 작은 프로젝트도 생각만큼 쉬운 건 아니라는 것을 알 수 있었습니다. 
+
